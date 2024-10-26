@@ -4,6 +4,7 @@ import PlayerInfo from "./PlayerInfo";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import EndInfo from "./EndInfo";
+import mainImage from "../assets/images/mainBg.jpg";
 
 export interface CardObj {
   id: number;
@@ -147,7 +148,7 @@ const Game = (): JSX.Element => {
           <StartButton onClick={startGame}>Start</StartButton>
         </StartContainer>
       )}
-      <PlayerInfo turns={turns} score={score} />
+      {isPlaying ? <PlayerInfo turns={turns} score={score} /> : ""}
     </GameContainer>
   );
 };
@@ -168,20 +169,43 @@ const GameContainer = styled.main`
 `;
 
 const StartContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 98%;
+  border-radius: 10px;
   text-align: center;
   margin-top: auto;
   font-size: 2rem;
+  background-repeat: no-repeat;
+  background: url(${mainImage});
+  background-position: center center;
+  background-size: cover;
+  box-shadow: 0 0 10px 5px rgba(0, 241, 243, 0.5);
 `;
 
 const StartButton = styled.button`
-  color: #fff;
-  width: 80%;
-  border-radius: 1rem;
-  border: 1px solid #fff;
-  font-size: 1.5rem;
-  padding-block: 0.5rem;
+  padding: 15px 25px;
+  font-size: 24px;
   cursor: pointer;
-  background-color: #149f81;
+  outline: none;
+  color: #fff;
+  background: #8bdc00;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #7ac70c;
+
+  // color: #fff;
+  // width: 80%;
+  // border-radius: 1rem;
+  // border: 1px solid #fff;
+  // font-size: 1.5rem;
+  // padding-block: 0.5rem;
+  // cursor: pointer;
+  // background-color: #149f81;
+  // box-shadow: 0 0 10px 5px rgba(238, 241, 243, 0.5);
 `;
 
 export default Game;
