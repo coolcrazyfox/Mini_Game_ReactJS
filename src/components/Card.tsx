@@ -41,9 +41,9 @@ const CardContainer = styled.div<CardFlippedImgProps>`
   box-sizing: border-box;
   border: ${(props) =>
     props.found ? "4px inset #1bed0cf3" : "4px inset #ee4839f3"};
-  border-radius: 0.5rem;
-  width: min(12vw, 10rem);
-  height: min(15vw, 10rem);
+  border-radius: 1rem;
+  width: min(15vw, 12rem);
+  height: min(16vh, 12rem);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,11 +58,11 @@ const CardContainer = styled.div<CardFlippedImgProps>`
 const CardImage = styled.img`
   width: 100%;
   height: 100%;
-  border-radius: 0.4rem;
+  border-radius: 1rem;
 `;
 const CardFlippedImage = styled.img`
   width: 70%;
   height: 70%;
-  border-radius: 0.4rem;
+  border-radius: 1rem;
 `;
 export default Card;
