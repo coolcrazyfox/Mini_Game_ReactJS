@@ -140,7 +140,7 @@ const Game = (): JSX.Element => {
   return (
     <GameContainer>
       {gameFinished ? (
-        <EndInfo resetGame={resetGame} />
+        <EndInfo resetGame={resetGame} turns={turns} score={score} />
       ) : isPlaying ? (
         <FirstLevelContainer>
           <CardGrid randomCards={randomCards} handleClick={handleClick} />
