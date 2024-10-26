@@ -46,7 +46,6 @@ const Game = (): JSX.Element => {
         setGameFinished(true);
         setRandomCards(null);
       }, 1000);
-
     }
   }, [score]);
 
@@ -77,7 +76,7 @@ const Game = (): JSX.Element => {
         setTimeout(() => {
           setRandomCards(newState);
           setSelectedCards([]);
-        }, 1500);
+        }, 2000);
       }
     }
   }, [selectedCards]);
@@ -163,7 +162,7 @@ const GameContainer = styled.main`
   height: 750px;
   border: 1px solid black;
   padding: 1rem;
-  background-color: #E8E8E8;
+  background-color: #e8e8e8;
 `;
 
 const StartContainer = styled.div`
