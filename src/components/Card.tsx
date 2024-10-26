@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { CardObj } from "./Game";
-// import cardBackImage from "../libs/images/card-back.png";
 import cardBackImage from "../libs/images/question-green.png";
 
 type CardProps = {
@@ -51,6 +50,10 @@ const CardContainer = styled.div<CardFlippedImgProps>`
   cursor: pointer;
   padding: 0;
   background-color: #62c6f7f3;
+  box-shadow: ${(props) =>
+    props.found
+      ? "0 0 10px 5px rgba(238, 241, 243, 0.5)"
+      : "0 0 10px 5px rgba(0, 0, 0, 0.5)"};
 `;
 const CardImage = styled.img`
   width: 100%;
@@ -58,8 +61,8 @@ const CardImage = styled.img`
   border-radius: 0.4rem;
 `;
 const CardFlippedImage = styled.img`
-  width: 50%;
-  height: 50%;
+  width: 70%;
+  height: 70%;
   border-radius: 0.4rem;
 `;
 export default Card;
