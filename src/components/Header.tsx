@@ -1,12 +1,9 @@
 import styled from "styled-components";
 
-import videoBackground from "../assets/images/galaxy.jpg";
-
 const Header = () => {
   return (
     <MainHeader>
-      {/* <MainVideoContainer src={videoBackground}></MainVideoContainer> */}
-      <Heading>React-App Memory Game</Heading>
+      <Heading>UFO Mini Game</Heading>
     </MainHeader>
   );
 };
@@ -14,24 +11,23 @@ const Header = () => {
 const MainHeader = styled.header`
   margin: 0 auto;
   text-align: center;
-  // width: 100%;
+  width: 100%;
 `;
-// const MainVideoContainer = styled.img`
-//   display: flex;
-//   flex-wrap: wrap;
-//   height: 80vh;
-//   border-radius: 10px;
-//   margin: 10px auto;
-//   background-image: url("images/wallSecond.jpg");
-//   background-repeat: no-repeat;
-//   background-position: center center;
-//   background-size: cover;
-//   box-shadow: 0 0 50px 30px rgba(0, 0, 0, 0.5);
-// `;
+
 const Heading = styled.h1`
-  color: #303030;
-  font-size: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 10px auto;
+  color: #149f81;
+  font-size: 28px;
   padding-inline: 36px;
+  border-radius: 10px;
+  width: 60vw;
+  background: #fab8048b;
+  box-shadow: 0 0 50px 30px rgba(0, 0, 0, 0.5);
 `;
 
 export default Header;
