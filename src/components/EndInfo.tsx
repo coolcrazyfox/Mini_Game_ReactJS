@@ -4,6 +4,8 @@ import goodImage from "../assets/images/goodJob.png";
 import notGoodImage from "../assets/images/notGood.png";
 import starIcon from "../assets/images/star.png";
 import emptyIcon from "../assets/images/emptyStar.png";
+import { Link } from "react-router-dom";
+import { PATH } from "../routes/RouterRoot";
 
 type EndInfoProps = {
   turns: number;
@@ -38,7 +40,9 @@ const EndInfo = ({ resetGame, turns }: EndInfoProps) => {
       {isFinished ? (
         <div>
           <p>Thanks for playing!</p>
-          <button onClick={resetGame}>back</button>
+          <Link to={PATH.HERO}>
+            <button onClick={resetGame}>back</button>
+          </Link>
         </div>
       ) : (
         <>
@@ -77,9 +81,11 @@ const EndInfo = ({ resetGame, turns }: EndInfoProps) => {
             {turns >= 40 ? (
               ""
             ) : (
-              <EndGameButtonNo onClick={() => setIsFinished(true)}>
-                Next Level
-              </EndGameButtonNo>
+              <Link to={PATH.SECOND}>
+                <EndGameButtonNo onClick={() => setIsFinished(true)}>
+                  Next Level
+                </EndGameButtonNo>
+              </Link>
             )}
           </EndGameButtonContainer>
         </>

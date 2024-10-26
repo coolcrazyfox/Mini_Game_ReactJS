@@ -1,15 +1,12 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import SecondPage from "./pages/SecondPage";
+import Header from "./components/Header";
+import RouterRoot from "./routes/RouterRoot";
 
 const App = (): JSX.Element => {
   return (
-    <HashRouter>
-      <Routes>
-        <Route index element={<Home />}></Route>
-        <Route index element={<SecondPage />}></Route>
-      </Routes>
-    </HashRouter>
+    <>
+      <Header />
+      <RouterRoot />
+    </>
   );
 };
 
