@@ -27,8 +27,8 @@ const Wrapper = styled.section`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
-  row-gap: 1rem;
-  column-gap: 1rem;
+  row-gap: 4rem;
+  column-gap: 5rem;
   margin: 0 auto;
 `;
 export default CardGrid;

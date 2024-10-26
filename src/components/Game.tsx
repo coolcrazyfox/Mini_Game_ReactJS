@@ -77,7 +77,7 @@ const Game = (): JSX.Element => {
         setTimeout(() => {
           setRandomCards(newState);
           setSelectedCards([]);
-        }, 2000);
+        }, 1000);
       }
     }
   }, [selectedCards]);

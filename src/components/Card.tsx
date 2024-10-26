@@ -40,20 +40,21 @@ const Card = ({
 
 const CardContainer = styled.div<CardFlippedImgProps>`
   box-sizing: border-box;
-  border: ${(props) => (props.found ? "4px inset white" : "1px inset black")};
+  border: ${(props) =>
+    props.found ? "4px inset #1bed0cf3" : "4px inset #ee4839f3"};
   border-radius: 0.5rem;
-  width: min(10vw, 8rem);
+  width: min(12vw, 10rem);
   height: min(15vw, 10rem);
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   padding: 0;
-  background-color: white;
+  background-color: #62c6f7f3;
 `;
 const CardImage = styled.img`
-  width: 75%;
-  height: 75%;
+  width: 100%;
+  height: 100%;
   border-radius: 0.4rem;
 `;
 const CardFlippedImage = styled.img`
