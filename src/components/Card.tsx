@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { CardObj } from "./Game";
-import cardBackImage from "../libs/images/card-back.png";
+// import cardBackImage from "../libs/images/card-back.png";
+import cardBackImage from "../libs/images/question-red.png";
 
 type CardProps = {
   flippedImage: string;
