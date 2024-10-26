@@ -25,9 +25,9 @@ const Heading = styled.h1`
   font-size: 28px;
   padding-inline: 36px;
   border-radius: 10px;
-  width: 60vw;
+  width: 78vw;
   background: #fab8048b;
-  box-shadow: 0 0 50px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px 5px rgba(238, 241, 243, 0.5);
 `;
 
 export default Header;

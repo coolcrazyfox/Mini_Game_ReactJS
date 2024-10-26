@@ -153,16 +153,18 @@ const Game = (): JSX.Element => {
 };
 
 const GameContainer = styled.main`
-  width: 60%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  width: 80vw;
+  height: 90vh;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
-  height: 750px;
-  border: 1px solid black;
+  border: none;
   padding: 1rem;
-  background-color: #e8e8e8;
+  border-radius: 10px;
+  background: #fab8048b;
+  box-shadow: 0 10px 25px 5px rgba(238, 241, 243, 0.5);
 `;
 
 const StartContainer = styled.div`
@@ -172,13 +174,14 @@ const StartContainer = styled.div`
 `;
 
 const StartButton = styled.button`
+  color: #fff;
   width: 80%;
   border-radius: 1rem;
-  border: none;
+  border: 1px solid #fff;
   font-size: 1.5rem;
   padding-block: 0.5rem;
   cursor: pointer;
-  background-color: #COCOCO;
+  background-color: #149f81;
 `;
 
 export default Game;
