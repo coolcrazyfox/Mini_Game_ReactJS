@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { CardObj } from "./Game";
+import cardBackImage from "../libs/images/card-back.png";
 
 type CardProps = {
   flippedImage: string;
@@ -28,9 +29,9 @@ const Card = ({
       found={card.found ? true : false}
     >
       {card.flipped || card.found ? (
-        <CardFlippedImage src={flippedImage} alt="Alt text" />
+        <CardFlippedImage src={flippedImage} alt="Alt img item" />
       ) : (
-        <CardImage src="/react-project2/images/card-back.png" alt="Alt text" />
+        <CardImage src={cardBackImage} alt="Alt card back img" />
       )}
     </CardContainer>
   );
