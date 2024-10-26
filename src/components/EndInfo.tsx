@@ -7,11 +7,10 @@ import emptyIcon from "../assets/images/emptyStar.png";
 
 type EndInfoProps = {
   turns: number;
-  score: number;
   resetGame: () => void;
 };
 
-const EndInfo = ({ resetGame, turns, score }: EndInfoProps) => {
+const EndInfo = ({ resetGame, turns }: EndInfoProps) => {
   const [isFinished, setIsFinished] = useState(false);
   const notGoodResult = [
     { id: 1, name: "1-1", link: <StarItem /> },
