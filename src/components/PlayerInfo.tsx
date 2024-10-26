@@ -8,14 +8,14 @@ type PlayerInfoProps = {
 const PlayerInfo = ({ turns, score }: PlayerInfoProps) => {
   return (
     <Wrapper>
-      <p>
+      <InfoTurns>
         {`Turns: `}
         <strong>{`${turns}`}</strong>
-      </p>
-      <p>
+      </InfoTurns>
+      <InfoPairsFound>
         {`Pairs found: `}
         <strong>{`${score}`}</strong>
-      </p>
+      </InfoPairsFound>
     </Wrapper>
   );
 };
@@ -23,9 +23,16 @@ const PlayerInfo = ({ turns, score }: PlayerInfoProps) => {
 const Wrapper = styled.section`
   display: flex;
   justify-content: space-between;
-  width: 70%;
-  margin-top: auto;
-  font-size: 20px;
+  width: 90%;
+  // margin-top: auto;
+  // font-size: 20px;
 `;
-
+const InfoTurns = styled.p`
+  color: #fff;
+  font-size: 24px;
+`;
+const InfoPairsFound = styled.p`
+  color: #fff;
+  font-size: 24px;
+`;
 export default PlayerInfo;

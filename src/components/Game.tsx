@@ -200,20 +200,6 @@ const StartButton = styled.button`
   border: none;
   border-radius: 15px;
   box-shadow: 0 5px #7ac70c;
-
-  // color: #fff;
-  // width: 80%;
-  // border-radius: 1rem;
-  // border: 1px solid #fff;
-  // font-size: 1.5rem;
-  // padding-block: 0.5rem;
-  // cursor: pointer;
-  // background-color: #149f81;
-  // box-shadow: 0 0 10px 5px rgba(238, 241, 243, 0.5);
-  //   button:active {
-  //   box-shadow: none;
-  //   transform: translateY(5px);
-  // }
 `;
 
 export default Game;

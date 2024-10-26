@@ -27,7 +27,7 @@ const Wrapper = styled.section`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
-  row-gap: 4rem;
+  row-gap: 3rem;
   column-gap: 5rem;
   margin: 0 auto;
 `;
