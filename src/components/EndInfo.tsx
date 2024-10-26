@@ -15,8 +15,11 @@ const EndInfo = ({ resetGame }: EndInfoProps) => {
       ) : (
         <>
           <GoodJobImg />
-          {/* <p>You found all of the matching cards!</p> */}
-          {/* <p>Would you like to play again?</p> */}
+          <StarsPointsContainer>
+            <div>1</div>
+            <div>3</div>
+            <div>5</div>
+          </StarsPointsContainer>
           <EndGameButtonContainer>
             <EndGameButtonYes onClick={resetGame}>Return</EndGameButtonYes>
             <EndGameButtonNo onClick={() => setIsFinished(true)}>
@@ -43,6 +46,38 @@ const EndGameButtonContainer = styled.div`
   gap: 1rem;
 `;
 
+const StarsPointsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  // height: 55px;
+  // width: 400px;
+  // padding: 15px 25px;
+  // font-size: 24px;
+  // cursor: pointer;
+  // outline: none;
+  // color: #fff;
+  // background: #8bdc00;
+  // border: none;
+  // border-radius: 15px;
+  // box-shadow: 0 5px #7ac70c;
+`;
+const NotGood = styled.section`
+  margin: auto;
+  text-align: center;
+  font-size: 32px;
+`;
+const Normal = styled.section`
+  margin: auto;
+  text-align: center;
+  font-size: 32px;
+`;
+const NiceJob = styled.section`
+  margin: auto;
+  text-align: center;
+  font-size: 32px;
+`;
 const EndGameButtonYes = styled.button`
   display: flex;
   justify-content: center;
