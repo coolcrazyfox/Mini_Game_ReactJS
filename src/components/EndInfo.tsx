@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import goodImage from "../assets/images/goodJob.png";
 import starIcon from "../assets/images/star.png";
+import emptyIcon from "../assets/images/emptyStar.png";
 
 type EndInfoProps = {
   resetGame: () => void;
