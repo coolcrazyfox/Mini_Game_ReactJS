@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import EndInfo from "./EndInfo";
 import mainImage from "../assets/images/mainBg.jpg";
+import firstImage from "../assets/images/firstLevel.jpg";
 
 export interface CardObj {
   id: number;
@@ -141,7 +142,9 @@ const Game = (): JSX.Element => {
       {gameFinished ? (
         <EndInfo resetGame={resetGame} />
       ) : isPlaying ? (
-        <CardGrid randomCards={randomCards} handleClick={handleClick} />
+        <FirstLevelContainer>
+          <CardGrid randomCards={randomCards} handleClick={handleClick} />
+        </FirstLevelContainer>
       ) : (
         <StartContainer>
           <TitleText>Press Start to play!</TitleText>
@@ -161,11 +164,11 @@ const GameContainer = styled.main`
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-  border: none;
+  border-left: 1px solid #fff;
   padding: 1rem;
   border-radius: 10px;
-  background: #fab8048b;
-  box-shadow: 0 10px 25px 5px rgba(238, 241, 243, 0.5);
+  background: #7825c0c8;
+  box-shadow: 0 2px 15px 5px rgba(238, 241, 243, 0.5);
 `;
 
 const StartContainer = styled.div`
@@ -183,7 +186,26 @@ const StartContainer = styled.div`
   background: url(${mainImage});
   background-position: center center;
   background-size: cover;
-  box-shadow: 0 0 10px 5px rgba(0, 241, 243, 0.5);
+  box-shadow: 0 10px 10px 10px rgba(0, 241, 243, 0.5);
+`;
+const FirstLevelContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 98%;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: auto;
+  font-size: 2rem;
+  background-repeat: no-repeat;
+  background: url(${firstImage});
+  background-position: center center;
+  background-size: cover;
+  border-left: 1px solid white;
+  border-top: 1px solid black;
+  box-shadow: 0 0 20px 7px rgba(20, 0, 243, 0.5);
 `;
 const TitleText = styled.p`
   color: #7ac70c;

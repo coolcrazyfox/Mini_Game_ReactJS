@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { CardObj } from "./Game";
-import cardBackImage from "../libs/images/question-green.png";
+import cardBackImage from "../libs/images/question-lemon.png";
 
 type CardProps = {
   flippedImage: string;
@@ -49,7 +49,7 @@ const CardContainer = styled.div<CardFlippedImgProps>`
   align-items: center;
   cursor: pointer;
   padding: 0;
-  background-color: #62c6f7f3;
+  background-color: ${(props) => (props.found ? "#1bed0cb5" : "#f0a284f3")};
   box-shadow: ${(props) =>
     props.found
       ? "0 0 10px 5px rgba(238, 241, 243, 0.5)"
