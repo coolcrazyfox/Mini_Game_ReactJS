@@ -144,7 +144,7 @@ const Game = (): JSX.Element => {
         <CardGrid randomCards={randomCards} handleClick={handleClick} />
       ) : (
         <StartContainer>
-          <p>Press Start to play!</p>
+          <TitleText>Press Start to play!</TitleText>
           <StartButton onClick={startGame}>Start</StartButton>
         </StartContainer>
       )}
@@ -185,7 +185,11 @@ const StartContainer = styled.div`
   background-size: cover;
   box-shadow: 0 0 10px 5px rgba(0, 241, 243, 0.5);
 `;
-
+const TitleText = styled.p`
+  color: #7ac70c;
+  font-size: 5rem;
+  margin-bottom: 10%;
+`;
 const StartButton = styled.button`
   padding: 15px 25px;
   font-size: 24px;
@@ -206,6 +210,10 @@ const StartButton = styled.button`
   // cursor: pointer;
   // background-color: #149f81;
   // box-shadow: 0 0 10px 5px rgba(238, 241, 243, 0.5);
+  //   button:active {
+  //   box-shadow: none;
+  //   transform: translateY(5px);
+  // }
 `;
 
 export default Game;
