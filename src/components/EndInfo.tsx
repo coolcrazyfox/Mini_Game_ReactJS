@@ -16,9 +16,9 @@ const EndInfo = ({ resetGame }: EndInfoProps) => {
         <>
           <GoodJobImg />
           <StarsPointsContainer>
-            <div>1</div>
-            <div>3</div>
-            <div>5</div>
+            <NotGood />
+            <Normal />
+            <NiceJob />
           </StarsPointsContainer>
           <EndGameButtonContainer>
             <EndGameButtonYes onClick={resetGame}>Return</EndGameButtonYes>
@@ -63,20 +63,24 @@ const StarsPointsContainer = styled.div`
   // border-radius: 15px;
   // box-shadow: 0 5px #7ac70c;
 `;
-const NotGood = styled.section`
+const NotGood = styled.div`
+  width: 500px;
+  height: 55px;
   margin: auto;
-  text-align: center;
-  font-size: 32px;
+  background: #fff;
+  border: 1px solid red;
 `;
-const Normal = styled.section`
-  margin: auto;
-  text-align: center;
-  font-size: 32px;
+const Normal = styled.div`
+  width: 500px;
+  height: 55px;
+  background: #fff;
+  border: 1px solid red;
 `;
-const NiceJob = styled.section`
-  margin: auto;
-  text-align: center;
-  font-size: 32px;
+const NiceJob = styled.div`
+  width: 500px;
+  height: 55px;
+  background: #fff;
+  border: 1px solid red;
 `;
 const EndGameButtonYes = styled.button`
   display: flex;
