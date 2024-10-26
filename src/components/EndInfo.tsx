@@ -10,6 +10,27 @@ type EndInfoProps = {
 
 const EndInfo = ({ resetGame }: EndInfoProps) => {
   const [isFinished, setIsFinished] = useState(false);
+  const notGoodResult = [
+    { id: 1, name: "1", link: <StarItem /> },
+    { id: 2, name: "2", link: <EmptyStarItem /> },
+    { id: 3, name: "3", link: <EmptyStarItem /> },
+    { id: 4, name: "4", link: <EmptyStarItem /> },
+    { id: 5, name: "5", link: <EmptyStarItem /> },
+  ];
+  const normalResult = [
+    { id: 6, name: "1", link: <StarItem /> },
+    { id: 7, name: "2", link: <StarItem /> },
+    { id: 8, name: "3", link: <StarItem /> },
+    { id: 9, name: "4", link: <EmptyStarItem /> },
+    { id: 10, name: "5", link: <EmptyStarItem /> },
+  ];
+  const goodResult = [
+    { id: 11, name: "1", link: <StarItem /> },
+    { id: 12, name: "2", link: <StarItem /> },
+    { id: 13, name: "3", link: <StarItem /> },
+    { id: 14, name: "4", link: <StarItem /> },
+    { id: 15, name: "5", link: <StarItem /> },
+  ];
   return (
     <EndGameContainer>
       {isFinished ? (
@@ -19,11 +40,20 @@ const EndInfo = ({ resetGame }: EndInfoProps) => {
           <GoodJobImg />
           <StarsPointsContainer>
             <NotGood>
-              {1}
-              <StarItem></StarItem>
+              {notGoodResult.map((item, index) => {
+                return <div key={item.id}>{item.link}</div>;
+              })}
             </NotGood>
-            <Normal>{3}</Normal>
-            <NiceJob>{5}</NiceJob>
+            <Normal>
+              {normalResult.map((item, index) => {
+                return <div key={item.id}>{item.link}</div>;
+              })}
+            </Normal>
+            <NiceJob>
+              {goodResult.map((item, index) => {
+                return <div key={item.id}>{item.link}</div>;
+              })}
+            </NiceJob>
           </StarsPointsContainer>
           <EndGameButtonContainer>
             <EndGameButtonYes onClick={resetGame}>Return</EndGameButtonYes>
@@ -96,6 +126,14 @@ const StarItem = styled.div`
   background-position: center center;
   background-size: cover;
 `;
+const EmptyStarItem = styled.div`
+  width: 50px;
+  height: 50px;
+  background: url(${emptyIcon});
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+`;
 const EndGameButtonYes = styled.button`
   display: flex;
   justify-content: center;
@@ -130,7 +168,7 @@ const EndGameButtonNo = styled.button`
 `;
 const GoodJobImg = styled.div`
   display: flex;
-  height: 50vh;
+  height: 60vh;
   background-repeat: no-repeat;
   background: url(${goodImage});
   background-position: center center;
